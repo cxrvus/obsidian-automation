@@ -1,3 +1,5 @@
+use oxydian::execute;
+
 fn main() {
-    println!("Hello, world!");
+	execute();
 }
