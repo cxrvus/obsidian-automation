@@ -1,5 +1,7 @@
-use oxydian::execute;
+use oxydian;
+
 
 fn main() {
-	execute();
+	let app = oxydian::flow::App::new();
+	if let Err(e) = app { eprintln!("<!> Error: {}", e); }
 }
