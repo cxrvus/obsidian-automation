@@ -1,7 +1,6 @@
-use oxydian;
-
+use oxydian::prelude::*;
 
 fn main() {
-	let app = oxydian::flow::App::new();
+	let app = App::new();
 	if let Err(e) = app { eprintln!("<!> Error: {}", e); }
 }
