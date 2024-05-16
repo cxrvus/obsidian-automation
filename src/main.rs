@@ -1,6 +1,6 @@
 use oxydian::prelude::*;
 
 fn main() {
-	let app = App::new();
-	if let Err(e) = app { eprintln!("<!> Error: {}", e); }
+	let vault = Vault::new(VaultSetup { root_path:  "~/Obsidian/TestVault".into() });
+	if let Err(e) = vault { eprintln!("<!> Error: {}", e); }
 }
