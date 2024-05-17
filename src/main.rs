@@ -2,7 +2,7 @@ use oxydian::prelude::*;
 mod flows;
 
 fn main() {
-	if let Err(e) = execute() { eprintln!("<!> Error: {}", e); }
+	if let Err(e) = execute() { eprintln!("<!>\n{}", e); }
 }
 
 fn execute() -> Result<()> {
