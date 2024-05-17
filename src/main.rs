@@ -2,6 +2,18 @@ use oxydian::prelude::*;
 mod flows;
 
 fn main() {
-	let vault = Vault::new(VaultSetup { root_path:  "~/Obsidian/TestVault".into() });
-	if let Err(e) = vault { eprintln!("<!> Error: {}", e); }
+	if let Err(e) = execute() { eprintln!("<!> Error: {}", e); }
+}
+
+fn execute() -> Result<()> {
+	Vault::new(VaultSetup {
+			root_path:  "~/Obsidian/TestVault".into()
+		})?
+		.with_flows(HashMap::from([
+			("refresh".into(), flows::refresh::REFRESH)
+		]))?
+		.execute()?
+	;
+
+	Ok(())
 }
