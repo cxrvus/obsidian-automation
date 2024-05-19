@@ -7,7 +7,7 @@ fn main() {
 
 fn execute() -> Result<()> {
 	Vault::new(VaultSetup {
-			root_path:  "~/Obsidian/TestVault".into()
+			root_path:  "/home/cxrvus/Obsidian/TestVault".into()
 		})?
 		.with_flows(HashMap::from([
 			("refresh".into(), flows::refresh::REFRESH)
