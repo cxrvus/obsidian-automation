@@ -10,7 +10,8 @@ fn execute() -> Result<()> {
 			root_path:  "/home/cxrvus/Obsidian/TestVault".into()
 		})?
 		.with_flows(HashMap::from([
-			("refresh".into(), flows::refresh::REFRESH)
+			("refresh".into(), flows::refresh::REFRESH),
+			("refresh_all".into(), flows::refresh_all::REFRESH_ALL)
 		]))?
 		.execute()?
 	;
