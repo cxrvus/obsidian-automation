@@ -6,7 +6,7 @@ fn main() {
 }
 
 fn execute() -> Result<()> {
-	Vault::new(VaultSetup {
+	App::new(VaultConfig {
 			root_path:  "/home/cxrvus/Obsidian/TestVault".into()
 		})?
 		.with_flows(HashMap::from([
