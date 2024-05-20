@@ -3,8 +3,8 @@ use oxydian::prelude::*;
 pub const REFRESH: Flow = Flow { 
 	name: "refresh",
 	func: FreeFn(|vault| {
-		let note = Item::get(vault.path("Notes/CX.md"))?.note().ok_or(anyhow!("<!> Not a note"))?.get_content();
-		print!("{note}");
+		let note = Item::get(vault.path("Notes/CX.md"))?.note()?;
+		print!("{}", note.get_content());
 		Ok(())
 	})
 };
