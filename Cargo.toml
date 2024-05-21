@@ -5,3 +5,4 @@ edition = "2021"
 
 [dependencies]
 oxydian =  { path = "../oxydian" }
+serde = { version = "1.0.202", features = ["derive"] }
